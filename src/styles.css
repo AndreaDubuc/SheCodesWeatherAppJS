@@ -1,0 +1,136 @@
+.container {
+  margin: 50px auto 50px;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  box-shadow: 0 0 30px #ffc107;
+  padding: 30px 50px;
+  max-width: 600px;
+}
+
+form {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: hsl(279, 84%, 41%);
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: hsl(279, 84%, 41%);
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: hsl(279, 84%, 41%);
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: hsl(279, 84%, 41%);
+}
+
+#input-box {
+  transition: 0.5s;
+  border: 2px solid #ffc107;
+  box-shadow: 0 0 15px #ffc107;
+  border-radius: 4px;
+  color: hsl(279, 84%, 41%);
+}
+
+#input-box:hover {
+  color: #27bace;
+  box-shadow: 0 0 30px #ffc107;
+}
+
+.search-box {
+  transition: 0.5s;
+  border: 2px solid #ffc107;
+  box-shadow: 0 0 15px #ffc107;
+  border-radius: 4px;
+  color: hsl(279, 84%, 41%);
+}
+
+.search-box:hover {
+  color: #27bace;
+  box-shadow: 0 0 30px #ffc107;
+}
+
+.current-temp {
+  color: #ef5f9a;
+  font-family: "Roboto Mono", monospace;
+  font-size: 25px;
+}
+
+.city-time-date {
+  color: #ef5f9a;
+  font-family: "Roboto Mono", monospace;
+}
+
+.city {
+  font-size: 30px;
+}
+
+.day-hour {
+  font-size: 16px;
+  position: relative;
+  top: -1px;
+}
+
+.weather-description {
+  font-size: 20px;
+  position: relative;
+  top: -23px;
+}
+
+.fa-cloud-moon-rain {
+  font-size: 115px;
+  /*text-shadow: 0 0 80px #6fdae7;*/
+}
+
+.current-temp {
+  font-size: 30px;
+}
+
+.precep-humidity-wind {
+  color: #ef5f9a;
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+}
+
+i {
+  color: #6fdae7;
+  font-size: 30px;
+}
+
+.Forecast {
+  text-align: center;
+  color: #b26cd8;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+}
+
+/*
+#sat {
+  text-shadow: 0 0 30px #6fdae7;
+}
+#sun {
+  text-shadow: 0 0 30px #6fdae7;
+}
+#mon {
+  text-shadow: 0 0 30px #6fdae7;
+}
+#tue {
+  text-shadow: 0 0 30px #6fdae7;
+}
+#wed {
+  text-shadow: 0 0 30px #6fdae7;
+}
+*/
+
+footer {
+  text-align: center;
+  color: #b26cd8;
+  font-family: "Roboto Mono", monospace;
+  font-size: 10px;
+}
