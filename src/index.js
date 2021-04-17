@@ -11,3 +11,19 @@ function search(event) {
 
 let searchCity = document.querySelector("#search-form");
 searchCity.addEventListener("submit", search);
+
+let now = new Date();
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+let day = days[now.getDay()];
+let h2 = document.querySelector("h2");
+h2.innerHTML = `${day}|${hours}:${minutes}`;
