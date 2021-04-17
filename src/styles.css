@@ -4,7 +4,7 @@
   border-radius: 4px;
   box-shadow: 0 0 30px #ffc107;
   padding: 30px 50px;
-  max-width: 600px;
+  max-width: 550px;
 }
 
 form {
@@ -59,7 +59,30 @@ form {
 .current-temp {
   color: #ef5f9a;
   font-family: "Roboto Mono", monospace;
-  font-size: 25px;
+}
+
+.temperature {
+  font-size: 30px;
+}
+
+#celsius-link {
+  font-size: 15px;
+  text-decoration: none;
+  position: relative;
+  right: -8px;
+}
+
+.units {
+  font-size: 15px;
+  position: relative;
+  top: -9px;
+  right: 23px;
+}
+#fahrenheit-link {
+  font-size: 15px;
+  text-decoration: none;
+  position: relative;
+  left: -8px;
 }
 
 .city-time-date {
@@ -69,18 +92,20 @@ form {
 
 .city {
   font-size: 30px;
+  right: 20px;
 }
 
 .day-hour {
   font-size: 16px;
   position: relative;
-  top: -1px;
+  top: -8px;
 }
 
 .weather-description {
-  font-size: 20px;
+  font-size: 16px;
   position: relative;
-  top: -23px;
+  left: 15px;
+  top: -35px;
 }
 
 .fa-cloud-moon-rain {
