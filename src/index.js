@@ -14,7 +14,14 @@ searchCity.addEventListener("submit", search);
 
 let now = new Date();
 let hours = now.getHours();
-let minutes = now.getMinutes();
+
+// Added a function so that there is a "0" for the minutes if it's under "10".
+function minutes_with_leading_zeros(now) {
+  return (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
+}
+
+let minutes = minutes_with_leading_zeros(now);
+
 let days = [
   "Sunday",
   "Monday",
@@ -27,3 +34,21 @@ let days = [
 let day = days[now.getDay()];
 let h2 = document.querySelector("h2");
 h2.innerHTML = `${day}|${hours}:${minutes}`;
+
+// Added a function to change the temperature from celsius to fahrenheit.
+let celsiusUnit = document.querySelector("#celsius-link");
+
+function changeUnitC() {
+  let celsiusTemperature = document.querySelector("#temperature");
+  celsiusTemperature.innerHTML = `14`;
+}
+
+celsiusUnit.addEventListener("click", changeUnitC);
+
+function changeUnitF() {
+  let fahrenheitTemperature = document.querySelector("#temperature");
+  fahrenheitTemperature.innerHTML = `57`;
+}
+
+let fahrenheitUnit = document.querySelector("#fahrenheit-link");
+fahrenheitUnit.addEventListener("click", changeUnitF);
