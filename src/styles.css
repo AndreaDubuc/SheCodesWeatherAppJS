@@ -1,3 +1,7 @@
+html {
+  min-height: 100%;
+}
+
 body {
   background-image: url(./assets/wall.jpg);
   background-size: cover;
