@@ -3,13 +3,14 @@ function search(event) {
   let searchInput = document.querySelector("#input-box");
   let h1 = document.querySelector("h1");
   if (searchInput.value) {
-    h1.innerHTML = `${searchInput.value}`;
+    h1.innerHTML = `${searchInput.value}`.toUpperCase().trim();
   } else {
     alert("Type a city, silly 🤪 ");
   }
 }
 
 let searchCity = document.querySelector("#search-form");
+console.log(searchCity);
 searchCity.addEventListener("submit", search);
 
 let now = new Date();
@@ -33,14 +34,14 @@ let days = [
 ];
 let day = days[now.getDay()];
 let h2 = document.querySelector("h2");
-h2.innerHTML = `${day}|${hours}:${minutes}`;
+h2.innerHTML = `${day.toUpperCase()}  ${hours}:${minutes}`;
 
 // Added a function to change the temperature from celsius to fahrenheit.
 let celsiusUnit = document.querySelector("#celsius-link");
 
 function changeUnitC() {
   let celsiusTemperature = document.querySelector("#temperature");
-  celsiusTemperature.innerHTML = `14`;
+  celsiusTemperature.innerHTML = `14 `;
 }
 
 celsiusUnit.addEventListener("click", changeUnitC);
