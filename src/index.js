@@ -34,7 +34,7 @@ let days = [
 ];
 let day = days[now.getDay()];
 let h2 = document.querySelector("h2");
-h2.innerHTML = `${day.toUpperCase()}  ${hours}:${minutes}`;
+h2.innerHTML = `${day.toUpperCase()} </br> ${hours}:${minutes}`;
 
 // Added a function to change the temperature from celsius to fahrenheit.
 let celsiusUnit = document.querySelector("#celsius-link");
@@ -53,3 +53,8 @@ function changeUnitF() {
 
 let fahrenheitUnit = document.querySelector("#fahrenheit-link");
 fahrenheitUnit.addEventListener("click", changeUnitF);
+
+// API
+
+let apiKey = "775e9c304f4c99854ae283105fb24c72";
+let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=New York";
