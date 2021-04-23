@@ -29,11 +29,14 @@ function showPosition(position) {
   let apiKey = "775e9c304f4c99854ae283105fb24c72";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
-
   axios.get(`${apiUrl}`).then(showTemperature);
 }
+
+let currentLocation = document.querySelector(".location");
+currentLocation.addEventListener("click", function () {
+  navigator.geolocation.getCurrentPosition(showPosition);
+  city.innerHTML = `...`;
+});
 
 let currentTemp = document.querySelector("#temperature");
 let city = document.querySelector(".city");
@@ -41,13 +44,11 @@ let day_hour = document.querySelector(".day-hour");
 let weather_description = document.querySelector(".weather-description");
 
 function showTemperature(response) {
-  console.log(response);
   let temperature = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${temperature}`;
   let userCity = response.data.name;
   city.innerHTML = `${userCity.toUpperCase().trim()}`;
   let description = response.data.weather[0].description;
-  console.log(description.toUpperCase());
   weather_description.innerHTML = `${description.toUpperCase()}`;
   //FIND OUT HOW TO USE TIMEZONE FROM API TO GET TIME IN USER CITY
 }
