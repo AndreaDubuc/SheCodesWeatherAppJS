@@ -22,7 +22,6 @@ let h2 = document.querySelector("h2");
 h2.innerHTML = `${day.toUpperCase()} <br/> ${hours}:${minutes}`;
 
 // API
-
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -50,7 +49,7 @@ function showTemperature(response) {
   city.innerHTML = `${userCity.toUpperCase().trim()}`;
   let description = response.data.weather[0].description;
   weather_description.innerHTML = `${description.toUpperCase()}`;
-  //FIND OUT HOW TO USE TIMEZONE FROM API TO GET TIME IN USER CITY
+  //NEED to FIND OUT HOW TO USE TIMEZONE FROM API TO GET TIME IN USER's CITY
 }
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -60,7 +59,6 @@ if (navigator.geolocation) {
 }
 
 // Search City
-
 function search(event) {
   event.preventDefault();
   let userInput = document.querySelector("#input-box").value;
