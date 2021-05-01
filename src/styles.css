@@ -16,20 +16,9 @@ html {
   min-height: 100%;
 }
 
-.page-title{
-font-family: 'Roboto', sans-serif;
-font-size: 70px;
-text-align: center;
-margin-top: 50px;
-text-shadow: 0.1vw 0vw 0.25vw #2020ad, 0.2vw 0vw 0.25vw #e5ecf0,
-    0.4vw 0vw 0.25vw #a2c8da, 0.1vw 0vw 0vw #8fd2db, 0.2vw 0vw 0vw #8fd2db,
-    0.4vw 0vw 0vw #8fd2db, 0.1vw 0vw 0.1vw #8fd2db, 0.2vw 0vw 0.1vw #8fd2db,
-    0.4vw 0vw 0.1vw #8fd2db, 0.1vw 0vw 2vw #a3dde4, 0.2vw 0vw 2vw #8fd2db,
-    0.4vw 0vw 2vw #8fd2db, 0.1vw 0vw 1vw #426dfb, 0.2vw 0vw 1vw #303f9f,
-    0.4vw 0vw 5vw #303f9f, 0.1vw 0vw 5vw #303f9f, 0.2vw 0vw 20vw #303f9f,
-    0.4vw 0vw 10vw #303f9f, 0.1vw 0vw 10vw #303f9f, 0.2vw 0vw 30vw #303f9f,
-    0.4vw 0vw 10vw #2356ff;
-
+.title-page{
+  height: auto;
+  width: 500px;
 }
 
 .container {
