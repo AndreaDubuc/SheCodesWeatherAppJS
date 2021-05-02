@@ -19,7 +19,7 @@ let days = [
 ];
 let day = days[now.getDay()];
 let h2 = document.querySelector("h2");
-h2.innerHTML = `${day.toUpperCase()} <br/> ${hours}:${minutes}`;
+h2.innerHTML = `${day} <br/> ${hours}:${minutes}`;
 
 // API
 function showPosition(position) {
@@ -46,9 +46,9 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${temperature}`;
   let userCity = response.data.name;
-  city.innerHTML = `${userCity.toUpperCase().trim()}`;
+  city.innerHTML = `${userCity.trim()}`;
   let description = response.data.weather[0].description;
-  weather_description.innerHTML = `${description.toUpperCase()}`;
+  weather_description.innerHTML = `${description}`;
   //NEED to FIND OUT HOW TO USE TIMEZONE FROM API TO GET TIME IN USER's CITY
 }
 if (navigator.geolocation) {
