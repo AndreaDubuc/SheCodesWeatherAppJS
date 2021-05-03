@@ -21,7 +21,7 @@ let day = days[now.getDay()];
 let h2 = document.querySelector("h2");
 h2.innerHTML = `${day} <br/> ${hours}:${minutes}`;
 
-// API
+
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
