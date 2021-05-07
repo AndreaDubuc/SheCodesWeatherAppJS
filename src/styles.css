@@ -7,8 +7,8 @@ body {
 }
 
 @font-face {
-  font-family: Learning curve;
-  src: url(assets/learning_curve_bold_ot_tt.ttf) format('truetype');
+  font-family: Learning-Curve;
+  src: url(../assets/learning_curve_bold_ot_tt.ttf) format('truetype');
   
 }
 
@@ -103,7 +103,7 @@ form {
 .search-box {
   background: rgba(0, 0, 0, 0);
   outline: none;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   font-size: 30px;
   box-sizing: border-box;
   line-height: 19px;
@@ -125,7 +125,7 @@ form {
   /* Chrome/Opera/Safari */
   color: #ffff;
   font-size: 30px;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   text-shadow: 0.1vw 0vw 0.25vw #dfd0eb, 0.2vw 0vw 0.25vw #A117F2,
     0.4vw 0vw 0.25vw #A117F2, 0.1vw 0vw 0vw #A117F2, 0.2vw 0vw 0vw #A117F2,
     0.4vw 0vw 0vw #A117F2, 0.1vw 0vw 0.1vw #A117F2, 0.2vw 0vw 0.1vw #A117F2,
@@ -140,7 +140,7 @@ form {
   /* Firefox 19+ */
   color: #ffff;
   font-size: 30px;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   text-shadow: 0.1vw 0vw 0.25vw #dfd0eb, 0.2vw 0vw 0.25vw #A117F2,
     0.4vw 0vw 0.25vw #A117F2, 0.1vw 0vw 0vw #A117F2, 0.2vw 0vw 0vw #A117F2,
     0.4vw 0vw 0vw #A117F2, 0.1vw 0vw 0.1vw #A117F2, 0.2vw 0vw 0.1vw #A117F2,
@@ -155,7 +155,7 @@ form {
   /* IE 10+ */
   color: #ffff;
   font-size: 30px;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   text-shadow: 0.1vw 0vw 0.25vw #dfd0eb, 0.2vw 0vw 0.25vw #A117F2,
     0.4vw 0vw 0.25vw #A117F2, 0.1vw 0vw 0vw #A117F2, 0.2vw 0vw 0vw #A117F2,
     0.4vw 0vw 0vw #A117F2, 0.1vw 0vw 0.1vw #A117F2, 0.2vw 0vw 0.1vw #A117F2,
@@ -170,7 +170,7 @@ form {
   /* Firefox 18- */
   color: #ffff;
   font-size: 30px;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   text-shadow: 0.1vw 0vw 0.25vw #dfd0eb, 0.2vw 0vw 0.25vw #A117F2,
     0.4vw 0vw 0.25vw #A117F2, 0.1vw 0vw 0vw #A117F2, 0.2vw 0vw 0vw #A117F2,
     0.4vw 0vw 0vw #A117F2, 0.1vw 0vw 0.1vw #A117F2, 0.2vw 0vw 0.1vw #A117F2,
@@ -184,7 +184,7 @@ form {
 .city {
   color: #ffff;
   font-size: 70px;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   font-weight: bolder;
   text-shadow: 0.1vw 0vw 0.25vw #ffd8d8, 0.2vw 0vw 0.25vw #ff0086ff,
     0.4vw 0vw 0.25vw #ff0086ff, 0.1vw 0vw 0vw #ff0086ff, 0.2vw 0vw 0vw #ff0086ff,
@@ -200,7 +200,7 @@ form {
 .day-hour {
   font-size: 45px;
   color: #ffff;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   font-weight: bolder;
   text-shadow: 0.1vw 0vw 0.25vw #ffd8d8, 0.2vw 0vw 0.25vw #ff0086ff,
     0.4vw 0vw 0.25vw #ff0086ff, 0.1vw 0vw 0vw #ff0086ff, 0.2vw 0vw 0vw #ff0086ff,
@@ -217,7 +217,7 @@ form {
 .temperature {
   font-size: 45px;
   color: #ffff;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   font-weight: bolder;
   text-shadow: 0.1vw 0vw 0.25vw #ffd8d8, 0.2vw 0vw 0.25vw #ff0086ff,
     0.4vw 0vw 0.25vw #ff0086ff, 0.1vw 0vw 0vw #ff0086ff, 0.2vw 0vw 0vw #ff0086ff,
@@ -266,7 +266,7 @@ form {
 .weather-description {
   font-size: 45px;
   color: #ffff;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   text-shadow: 0.1vw 0vw 0.25vw #ffd8d8, 0.2vw 0vw 0.25vw #ff0086ff,
     0.4vw 0vw 0.25vw #ff0086ff, 0.1vw 0vw 0vw #ff0086ff, 0.2vw 0vw 0vw #ff0086ff,
     0.4vw 0vw 0vw #ff0086ff, 0.1vw 0vw 0.1vw #ff0086ff, 0.2vw 0vw 0.1vw #ff0086ff,
@@ -309,7 +309,7 @@ form {
 .Forecast {
   text-align: center;
   color: #ffff;
-  font-family: Learning curve;
+  font-family: Learning-Curve;
   font-size: 35px;
   font-weight: bolder;
 }
