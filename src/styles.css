@@ -7,8 +7,9 @@ body {
 }
 
 @font-face {
-  font-family: neon;
-  src: url(assets/learning_curve_bold_ot_tt.ttf);
+  font-family: Learning curve;
+  src: url(assets/learning_curve_bold_ot_tt.ttf) format('truetype');
+  
 }
 
 
