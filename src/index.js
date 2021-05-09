@@ -1,4 +1,4 @@
-let now = new Date();
+/*let now = new Date();
 let hours = now.getHours();
 
 // Added a function so that there is a "0" for the minutes if it's under "10".
@@ -18,8 +18,9 @@ let days = [
   "Saturday"
 ];
 let day = days[now.getDay()];
-let h2 = document.querySelector("h2");
+
 h2.innerHTML = `${day} <br/> ${hours}:${minutes}`;
+*/
 
 
 function showPosition(position) {
@@ -30,7 +31,6 @@ function showPosition(position) {
 
   axios.get(`${apiUrl}`).then(showTemperature);
 }
-
 
 
 let currentLocation = document.querySelector(".location");
@@ -44,27 +44,30 @@ let city = document.querySelector(".city");
 let weather_description = document.querySelector(".weather-description");
 
 
-function formatDate(timestamp){
+function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
-  if (hours <10){
-    hours= `0${hours}`;
+  if (hours < 10) {
+    hours = `0${hours}`;
   }
+
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-  let day= days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let h2 = document.getElementsByTagName("h2");
+  let day = days[date.getDay()];
+  h2.innerHTML = `${day} <br/> ${hours}:${minutes}`;
 }
 
 function showTemperature(response) {
@@ -73,12 +76,10 @@ function showTemperature(response) {
   let userCity = response.data.name;
   city.innerHTML = `${userCity.trim()}`;
   let description = response.data.weather[0].description;
+  console.log(description)
   let day_hour = document.querySelector(".day-hour");
   weather_description.innerHTML = `${description}`;
-  day_hour.innerHTML=formatDate(reponse.data.dt* 1000);
-
-
-
+  day_hour.innerHTML = await formatDate(response.data.dt * 1000);
   celsiusTemperature = response.data.main.temp;
   //NEED to FIND OUT HOW TO USE TIMEZONE FROM API TO GET TIME IN USER's CITY
 }
@@ -88,9 +89,8 @@ function showTemperature(response) {
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
   city.innerHTML = `...`;
-} else {
-  alert(`Enter a city, silly 🤪`);
 }
+
 
 // Search City
 function search(event) {
@@ -106,14 +106,14 @@ let searchCity = document.querySelector("#search-form");
 searchCity.addEventListener("submit", search);
 
 
-function showFahrenheitTemperature(event){
+function showFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   //remove the active class from the celsius link
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);  
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -121,12 +121,12 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 
 
-function showCelsiusTemperature(event){
+function showCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  temperatureElement.innerHTML= Math.round(celsiusTemperature);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   console.log(celsiusTemperature);
 }
 
@@ -134,4 +134,3 @@ let celsiusTemperature = null;
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
-

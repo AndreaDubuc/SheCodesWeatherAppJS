@@ -277,7 +277,6 @@ form {
   font-size: 45px;
   color: #ffff;
   font-family: Learning-Curve;
-  text-transform: capitalize;
   text-shadow: 0.1vw 0vw 0.25vw #ffd8d8, 0.2vw 0vw 0.25vw #ff0086ff,
     0.4vw 0vw 0.25vw #ff0086ff, 0.1vw 0vw 0vw #ff0086ff, 0.2vw 0vw 0vw #ff0086ff,
     0.4vw 0vw 0vw #ff0086ff, 0.1vw 0vw 0.1vw #ff0086ff, 0.2vw 0vw 0.1vw #ff0086ff,
@@ -289,6 +288,10 @@ form {
   position: relative;
   left: 15px;
   top: 19px;
+}
+
+.weather-description::first-letter{
+text-transform: capitalize;
 }
 
 .fa-cloud-moon-rain {
