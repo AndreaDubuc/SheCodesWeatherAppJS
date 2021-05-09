@@ -41,8 +41,31 @@ currentLocation.addEventListener("click", function () {
 
 let currentTemp = document.querySelector("#temperature");
 let city = document.querySelector(".city");
-let day_hour = document.querySelector(".day-hour");
 let weather_description = document.querySelector(".weather-description");
+
+
+function formatDate(timestamp){
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours <10){
+    hours= `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+  let day= days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
@@ -50,7 +73,11 @@ function showTemperature(response) {
   let userCity = response.data.name;
   city.innerHTML = `${userCity.trim()}`;
   let description = response.data.weather[0].description;
+  let day_hour = document.querySelector(".day-hour");
   weather_description.innerHTML = `${description}`;
+  day_hour.innerHTML=formatDate(reponse.data.dt* 1000);
+
+
 
   celsiusTemperature = response.data.main.temp;
   //NEED to FIND OUT HOW TO USE TIMEZONE FROM API TO GET TIME IN USER's CITY
