@@ -253,14 +253,24 @@ form {
   text-decoration: none;
   position: relative;
   right: -8px;
+  cursor:default;
 }
+
 
 #fahrenheit-link {
   color: #ffff;
-  ;
   text-decoration: none;
   position: relative;
   left: -8px;
+  cursor: default;
+}
+
+#fahrenheit-link.active {
+  color: yellow;
+}
+
+#celsius-link.active {
+  color: yellow;
 }
 
 .weather-description {
