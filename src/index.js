@@ -65,9 +65,9 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday"
   ];
-  let h2 = document.getElementsByTagName("h2");
+  
   let day = days[date.getDay()];
-  h2.innerHTML = `${day} <br/> ${hours}:${minutes}`;
+  return `${day} <br/> ${hours}:${minutes}`;
 }
 
 function showTemperature(response) {
@@ -76,10 +76,9 @@ function showTemperature(response) {
   let userCity = response.data.name;
   city.innerHTML = `${userCity.trim()}`;
   let description = response.data.weather[0].description;
-  console.log(description)
   let day_hour = document.querySelector(".day-hour");
   weather_description.innerHTML = `${description}`;
-  day_hour.innerHTML = await formatDate(response.data.dt * 1000);
+  day_hour.innerHTML = formatDate(response.data.dt * 1000);
   celsiusTemperature = response.data.main.temp;
   //NEED to FIND OUT HOW TO USE TIMEZONE FROM API TO GET TIME IN USER's CITY
 }
@@ -127,7 +126,7 @@ function showCelsiusTemperature(event) {
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  console.log(celsiusTemperature);
+  
 }
 
 let celsiusTemperature = null;
