@@ -65,7 +65,7 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday"
   ];
-  
+
   let day = days[date.getDay()];
   return `${day} <br/> ${hours}:${minutes}`;
 }
@@ -77,7 +77,9 @@ function showTemperature(response) {
   city.innerHTML = `${userCity.trim()}`;
   let description = response.data.weather[0].description;
   let day_hour = document.querySelector(".day-hour");
-  weather_description.innerHTML = `${description}`;
+  weather_description.innerHTML = `${
+    description[0].toUpperCase() + description.substring(1)
+  }`;
   day_hour.innerHTML = formatDate(response.data.dt * 1000);
   celsiusTemperature = response.data.main.temp;
   //NEED to FIND OUT HOW TO USE TIMEZONE FROM API TO GET TIME IN USER's CITY
@@ -97,7 +99,8 @@ function search(event) {
   let userInput = document.querySelector("#input-box").value;
   let apiKey = "775e9c304f4c99854ae283105fb24c72";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${apiKey}&units=metric`;
-
+  let response = axios.get(apiUrl);
+  response.then(response => console.log(response))
   axios.get(`${apiUrl}`).then(showTemperature);
 }
 
@@ -126,7 +129,7 @@ function showCelsiusTemperature(event) {
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  
+
 }
 
 let celsiusTemperature = null;
