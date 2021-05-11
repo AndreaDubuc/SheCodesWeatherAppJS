@@ -250,7 +250,7 @@ form {
   text-decoration: none;
   position: relative;
   right: -8px;
-  cursor:default;
+  cursor:pointer;
 }
 
 
@@ -259,7 +259,7 @@ form {
   text-decoration: none;
   position: relative;
   left: -8px;
-  cursor: default;
+  cursor: pointer;
 }
 
 #fahrenheit-link.active {
