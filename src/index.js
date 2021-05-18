@@ -1,28 +1,3 @@
-/*let now = new Date();
-let hours = now.getHours();
-
-// Added a function so that there is a "0" for the minutes if it's under "10".
-function minutes_with_leading_zeros(now) {
-  return (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
-}
-
-let minutes = minutes_with_leading_zeros(now);
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let day = days[now.getDay()];
-
-h2.innerHTML = `${day} <br/> ${hours}:${minutes}`;
-*/
-
-
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -70,6 +45,11 @@ function formatDate(timestamp) {
   return `${day} <br/> ${hours}:${minutes}`;
 }
 
+
+
+
+
+
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${temperature}`;
@@ -82,7 +62,8 @@ function showTemperature(response) {
   }`;
   day_hour.innerHTML = formatDate(response.data.dt * 1000);
   celsiusTemperature = response.data.main.temp;
-  //NEED to FIND OUT HOW TO USE TIMEZONE FROM API TO GET TIME IN USER's CITY
+ 
+
 }
 
 
@@ -91,6 +72,19 @@ if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
   city.innerHTML = `...`;
 }
+
+
+
+
+function getForecast(coordinates){
+  console.log(coordinates);
+  let apiKey = "775e9c304f4c99854ae283105fb24c72";
+  let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+console.log(apiUrl);
+axios.get(apiUrl).then(displayForecast);
+}
+
+
 
 
 // Search City
@@ -102,6 +96,10 @@ function search(event) {
   let response = axios.get(apiUrl);
   response.then(response => console.log(response))
   axios.get(`${apiUrl}`).then(showTemperature);
+
+
+getForecast(response.data.coord);
+
 }
 
 let searchCity = document.querySelector("#search-form");
@@ -133,6 +131,8 @@ function showCelsiusTemperature(event) {
 }
 
 let celsiusTemperature = null;
+
+
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
