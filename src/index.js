@@ -62,7 +62,7 @@ function showTemperature(response) {
   }`;
   day_hour.innerHTML = formatDate(response.data.dt * 1000);
   celsiusTemperature = response.data.main.temp;
- 
+
 
 }
 
@@ -76,14 +76,41 @@ if (navigator.geolocation) {
 
 
 
-function getForecast(coordinates){
+function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "775e9c304f4c99854ae283105fb24c72";
-  let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-console.log(apiUrl);
-axios.get(apiUrl).then(displayForecast);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  let response = axios.get(apiUrl).then(displayForecast);
+  console.log(response);
+
 }
 
+function displayForecast(response){
+  console.log(response);
+  let forecastElement=document.querySelector(".Forecast");
+  let days=[`Sat`,`Sun`,`Mon`,`Tue`,`Wed`,`Thu`,`Fri`];
+  days.forEach(function(day){
+    
+  })
+  let forecastHTML=`<div class="row`;
+  forecastHTML =
+  forecastHTML +
+  ` <div class="row">
+          <div class="col">
+            Sat
+            <br />
+            11°
+            <br />
+            <i id="sat" class="fas fa-cloud-rain"></i>
+          </div>`
+
+
+
+
+ 
+
+}
 
 
 
@@ -94,11 +121,12 @@ function search(event) {
   let apiKey = "775e9c304f4c99854ae283105fb24c72";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${apiKey}&units=metric`;
   let response = axios.get(apiUrl);
-  response.then(response => console.log(response))
+  response.then(response => console.log(response.data.coord));
+  response.then(response => getForecast(response.data.coord));
   axios.get(`${apiUrl}`).then(showTemperature);
 
 
-getForecast(response.data.coord);
+  //getForecast(data.coord);
 
 }
 
