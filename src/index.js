@@ -46,6 +46,16 @@ function formatDate(timestamp) {
 }
 
 
+function formatDay(timestamp){
+let date = new Date (timestamp * 1000);
+let day = date.getDay();
+let days = [`Sun`,`Mon`,`Tue`,`Wed`,`Thu`,`Fri`,`Sat`];
+
+return days [day];
+
+
+
+}
 
 
 
@@ -87,23 +97,24 @@ function getForecast(coordinates) {
 }
 
 function displayForecast(response){
-  console.log(response);
+  let forecast = response.data.daily;
+
   let forecastElement=document.querySelector(".Forecast");
-  let days=[`Sat`,`Sun`,`Mon`,`Tue`,`Wed`,`Thu`,`Fri`];
   let forecastHTML=`<div class="row>`;
-  days.forEach(function(day){
+  forecast.forEach(function(forecastDay, index){
+    if (index < 5) {
   forecastHTML =
   forecastHTML +
   ` <div class="row">
           <div class="col">
-            ${day}
+            ${formatDay(forecastDay.dt)}
             <br />
-            11°
+            ${Math.round(forecastDay.temp.max)}°
             <br />
             <i id="sat" class="fas fa-cloud-rain"></i>
           </div>`;
   
-  
+  }
   });
 
   forecastHTML = forecastHTML + `</div`;
