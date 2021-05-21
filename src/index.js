@@ -46,12 +46,12 @@ function formatDate(timestamp) {
 }
 
 
-function formatDay(timestamp){
-let date = new Date (timestamp * 1000);
-let day = date.getDay();
-let days = [`Sun`,`Mon`,`Tue`,`Wed`,`Thu`,`Fri`,`Sat`];
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
 
-return days [day];
+  return days[day];
 
 
 
@@ -70,6 +70,8 @@ function showTemperature(response) {
   weather_description.innerHTML = `${
     description[0].toUpperCase() + description.substring(1)
   }`;
+  console.log(`This is the response from showTemperature`);
+  console.log(response);
   day_hour.innerHTML = formatDate(response.data.dt * 1000);
   celsiusTemperature = response.data.main.temp;
 
@@ -96,31 +98,30 @@ function getForecast(coordinates) {
 
 }
 
-function displayForecast(response){
+function displayForecast(response) {
   let forecast = response.data.daily;
 
-  let forecastElement=document.querySelector(".Forecast");
-  let forecastHTML=`<div class="row>`;
-  forecast.forEach(function(forecastDay, index){
+  let forecastElement = document.querySelector(".Forecast");
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
-  forecastHTML =
-  forecastHTML +
-  ` <div class="row">
-          <div class="col">
+      forecastHTML =
+        forecastHTML +
+        `    <div class="col">
             ${formatDay(forecastDay.dt)}
             <br />
             ${Math.round(forecastDay.temp.max)}°
             <br />
             <i id="sat" class="fas fa-cloud-rain"></i>
           </div>`;
-  
-  }
+
+    }
   });
 
-  forecastHTML = forecastHTML + `</div`;
-  forecastElement.innerHTML= forecastHTML;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
-  
+
 
 }
 
