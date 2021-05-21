@@ -90,25 +90,26 @@ function displayForecast(response){
   console.log(response);
   let forecastElement=document.querySelector(".Forecast");
   let days=[`Sat`,`Sun`,`Mon`,`Tue`,`Wed`,`Thu`,`Fri`];
+  let forecastHTML=`<div class="row>`;
   days.forEach(function(day){
-    
-  })
-  let forecastHTML=`<div class="row`;
   forecastHTML =
   forecastHTML +
   ` <div class="row">
           <div class="col">
-            Sat
+            ${day}
             <br />
             11°
             <br />
             <i id="sat" class="fas fa-cloud-rain"></i>
-          </div>`
+          </div>`;
+  
+  
+  });
 
-
-
-
- 
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML= forecastHTML;
+  console.log(forecastHTML);
+  
 
 }
 
