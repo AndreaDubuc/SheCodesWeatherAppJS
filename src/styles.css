@@ -17,6 +17,7 @@ html {
   min-height: 100%;
 }
 
+
 .weather-neon {
   height: auto;
   width: 500px;
@@ -26,7 +27,7 @@ html {
   top: 60px;
   left:-450px;
   transform: rotate(-20deg);
-/* create by Andrea Dubuc of Inkscape*/
+/* create by Andrea Dubuc on Inkscape*/
 }
 
 
@@ -39,7 +40,7 @@ html {
   top: 60px;
   left:-410px;
   transform: rotate(-20deg);
-/* create by Andrea Dubuc of Inkscape*/
+/* create by Andrea Dubuc on Inkscape*/
 }
 
 .container {
@@ -286,7 +287,6 @@ form {
   left: 15px;
   top: 19px;
 }
-
 
 
 .fa-cloud-moon-rain {
