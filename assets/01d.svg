@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="129.38"
-   height="115.5"
-   viewBox="0 0 34.231792 30.559376"
+   width="793.70081"
+   height="1122.5197"
+   viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
    sodipodi:docname="clear sky (day).svg"
@@ -170,10 +170,10 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="258.81512"
-     inkscape:cy="316.47028"
-     inkscape:document-units="mm"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="320.55758"
+     inkscape:cy="591.49452"
+     inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
@@ -182,9 +182,9 @@
      inkscape:window-x="12"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:pagecheckerboard="false"
+     inkscape:pagecheckerboard="true"
      units="px"
-     showborder="false" />
+     showborder="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -203,7 +203,7 @@
      id="layer1">
     <g
        id="g1427"
-       transform="matrix(0.52954762,0,0,0.52954762,-40.526913,45.97791)">
+       transform="matrix(3.2783519,0,0,3.2783519,-574.03346,-41.002272)">
       <g
          id="g2493"
          style="stroke:#0fffff;stroke-width:1.7944;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter932)"

@@ -6,7 +6,7 @@ function showPosition(position) {
   let apiKey = "775e9c304f4c99854ae283105fb24c72";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
-  axios.get(`${apiUrl}`).then(showTemperature);
+  axios.get(`${apiUrl}`).then(showTemperature).then(weatherIcon).then(getForecast);
 }
 
 
@@ -76,10 +76,15 @@ function showTemperature(response) {
   console.log(response);
   day_hour.innerHTML = formatDate(response.data.dt * 1000);
   celsiusTemperature = response.data.main.temp;
-
-
+  return response;
 }
 
+function weatherIcon(response){
+let icon = response.data.weather[0].icon;
+let mainIcon=document.getElementsByClassName('clear-sky-day');
+mainIcon[0].setAttribute('src',`./assets/${icon}.svg`);
+return response;
+}
 
 
 if (navigator.geolocation) {
@@ -90,19 +95,21 @@ if (navigator.geolocation) {
 
 
 
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiKey = "775e9c304f4c99854ae283105fb24c72";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
-  let response = axios.get(apiUrl).then(displayForecast);
+function getForecast(response) {
+  console.log(`This is the upcoming API response being sent to getForecast`)
   console.log(response);
+  let apiKey = "775e9c304f4c99854ae283105fb24c72";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  let outResponse = axios.get(apiUrl).then(displayForecast);
+  console.log(`This is the getForecast API response`)
+  console.log(outResponse);
 
 }
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-
+console.log(forecast);
   let forecastElement = document.querySelector(".Forecast");
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
@@ -114,7 +121,7 @@ function displayForecast(response) {
             <br />
             ${Math.round(forecastDay.temp.max)}°
             <br />
-            <i id="sat" class="fas fa-cloud-rain"></i>
+            <img class="fivedforecast" src="./assets/${forecastDay.weather[0].icon}.svg"
           </div>`;
 
     }
