@@ -146,7 +146,7 @@ function search(event) {
   axios.get(`${apiUrl}`).then(showTemperature);
 
 
-  //getForecast(data.coord);
+  
 
 }
 
@@ -157,7 +157,6 @@ searchCity.addEventListener("submit", search);
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  //remove the active class from the celsius link
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;

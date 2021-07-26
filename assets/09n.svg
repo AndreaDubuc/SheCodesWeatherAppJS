@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="767.24408"
+   height="695.43304"
+   viewBox="0 0 203 184"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
-   sodipodi:docname="shower rain.svg">
+   sodipodi:docname="09d.svg">
   <defs
      id="defs2">
     <filter
@@ -33,7 +33,7 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter1161"
-       x="-0.090025639"
+       x="-0.090025641"
        width="1.1800513"
        y="-0.10152195"
        height="1.2030439">
@@ -47,7 +47,7 @@
        style="color-interpolation-filters:sRGB"
        id="filter1165"
        x="-0.10188506"
-       width="1.2037701"
+       width="1.20377"
        y="-0.11489582"
        height="1.2297916">
       <feGaussianBlur
@@ -63,9 +63,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
+     inkscape:zoom="0.62237762"
      inkscape:cx="277.82467"
-     inkscape:cy="604.21251"
+     inkscape:cy="475.67318"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -73,10 +73,11 @@
      inkscape:pagecheckerboard="false"
      inkscape:window-width="1651"
      inkscape:window-height="942"
-     inkscape:window-x="167"
-     inkscape:window-y="125"
+     inkscape:window-x="230"
+     inkscape:window-y="51"
      inkscape:window-maximized="0"
-     showborder="true" />
+     showborder="true"
+     units="px" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -105,7 +106,7 @@
        transform="scale(0.26458333)" />
     <g
        id="g123"
-       transform="matrix(9.6772338,0,0,9.6772338,727.18966,-22.786893)">
+       transform="matrix(9.6772338,0,0,9.6772338,723.16441,-80.272828)">
       <g
          id="g858"
          style="fill:#0fffff;fill-opacity:1;stroke:#0fffff;stroke-width:1.44992;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter1165)"
