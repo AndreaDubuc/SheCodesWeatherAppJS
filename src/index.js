@@ -54,12 +54,7 @@ function formatDay(timestamp) {
   let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
 
   return days[day];
-
-
-
 }
-
-
 
 
 function showTemperature(response) {
@@ -91,8 +86,6 @@ if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
   city.innerHTML = `...`;
 }
-
-
 
 
 function getForecast(response) {
@@ -128,10 +121,7 @@ console.log(forecast);
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
-
-
 }
-
 
 
 // Search City
@@ -144,9 +134,6 @@ function search(event) {
   response.then(response => console.log(response.data.coord));
   response.then(response => getForecast(response.data.coord));
   axios.get(`${apiUrl}`).then(showTemperature);
-
-
-  
 
 }
 
