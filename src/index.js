@@ -118,9 +118,7 @@ console.log(forecast);
         forecastHTML +
         `    <div class="col">
             ${formatDay(forecastDay.dt)}
-            <br />
             ${Math.round(forecastDay.temp.max)}°
-            <br />
             <img class="fivedforecast" src="./assets/${forecastDay.weather[0].icon}.svg"
           </div>`;
 
