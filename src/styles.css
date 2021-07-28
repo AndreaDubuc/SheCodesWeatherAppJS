@@ -289,7 +289,7 @@ form {
 }
 
 
-.clear-sky-day {
+.main-icon {
   color:#ffff;
   width: 150px;
   height: 210px;
@@ -302,8 +302,8 @@ form {
     0.4vw 0vw 10vw #A0FEFC, 0.1vw 0vw 10vw #A0FEFC, 0.2vw 0vw 30vw #A0FEFC,
     0.4vw 0vw 10vw #A0FEFC;
     position: relative;
-    top: 31px;
-    right:14px;
+    top: 20px;
+    right:3px;
 }
 
 .col {
@@ -326,10 +326,7 @@ form {
   font-weight: bolder;
 }
 
-i {
-  color: #6fdae7;
-  font-size: 30px;
-}
+
 
 .fivedforecast {
   color:#ffff;
@@ -343,8 +340,8 @@ i {
     0.4vw 0vw 10vw #A0FEFC;
   position: relative;
   top: 3px;
-  height:40px;
-  width:40px;
+  height:45px;
+  width:45px;
 }
 
 footer {
