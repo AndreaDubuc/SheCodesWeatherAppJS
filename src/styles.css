@@ -315,9 +315,12 @@ form {
     0.4vw 0vw 5vw #a117f2, 0.1vw 0vw 5vw #a117f2, 0.2vw 0vw 20vw #a117f2,
     0.4vw 0vw 10vw #a117f2, 0.1vw 0vw 10vw #a117f2, 0.2vw 0vw 30vw #a117f2,
     0.4vw 0vw 10vw #a117f2;
+
 }
 
-
+p{
+  margin:0px;
+}
 .Forecast {
   text-align: center;
   color: #ffff;
@@ -342,6 +345,7 @@ form {
   top: 3px;
   height:45px;
   width:45px;
+  margin-bottom: 10px;
 }
 
 footer {
